@@ -1,5 +1,0 @@
-h1{
-  @include filter(grayscale(90%));
-  color: pink;
-  font-size: golden-ratio(20px,  1);
-}

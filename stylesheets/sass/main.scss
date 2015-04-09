@@ -4,13 +4,9 @@ $visual-grid: true;
 @import "base/base";
 
 
+@import "partials/nav";
+@import "partials/main";
+@import "partials/footer";
 
 
 
-// Modules and Variables
-@import "partials/base";
-
-// Partials
-
-@import "partials/typography";
-@import "partials/buttons";
