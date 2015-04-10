@@ -33,12 +33,11 @@ header.navigation {
   }
 
   .logo {
-    float: right;
+    float: left;
     max-height: $navigation-height;
-    padding-left: $navigation-padding;
 
     img {
-      max-height: $navigation-height;
+      height: calc(2 * #{$navigation-height});
       padding: 0.8em 0;
     }
   }
@@ -73,7 +72,7 @@ header.navigation {
     z-index: 9999999;
 
     @include media ($horizontal-bar-mode) {
-      float: left;
+      float: right;
     }
   }
 
@@ -132,6 +131,9 @@ header.navigation {
       &:hover {
         color: $navigation-color-hover;
       }
+    }
+    &:last-child{
+      padding-right: 0;
     }
   }
 
@@ -247,6 +249,17 @@ header.navigation {
       }
     }
   }
+
+//frau
+.woman-wrapper{
+  @include outer-container; 
+  $navigation-background: $darkgrey;
+}
+  .woman{
+    @include span-columns(3);
+    @include shift(9);
+  }
+
 }
 
  
