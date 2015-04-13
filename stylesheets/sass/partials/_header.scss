@@ -2,8 +2,8 @@ header.navigation {
   $base-border-radius: 3px !default;
   $large-screen: em(860) !default;
   $navigation-padding: 1em;
-  $darkgrey: #181716;
-  $navigation-background: $darkgrey;
+  // $darkgrey: #181716;
+  $navigation-background: $dark-gray;
 
   $navigation-color: transparentize(white, 0.2);
   $navigation-color-hover: $pink;
@@ -33,12 +33,18 @@ header.navigation {
   }
 
   .logo {
-    float: left;
-    max-height: $navigation-height;
-
+    @include span-columns(4);
+    position: relative;
     img {
       height: calc(2 * #{$navigation-height});
       padding: 0.8em 0;
+    }
+    h1{
+      position: absolute;
+      top: 40%;
+      left: 20%;
+      font-size: $big-font-size;
+      color: transparentize(white, 0.2);
     }
   }
 
@@ -253,7 +259,7 @@ header.navigation {
 //frau
 .woman-wrapper{
   @include outer-container; 
-  $navigation-background: $darkgrey;
+  $navigation-background: $dark-gray;
 }
   .woman{
     @include span-columns(3);

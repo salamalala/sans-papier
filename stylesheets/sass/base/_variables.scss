@@ -4,6 +4,9 @@ $heading-font-family: "brandon-grotesque",sans-serif;
 
 // Font Sizes
 $base-font-size: 1em;
+$big-font-size: modular-scale(2);
+$very-big-font-size: modular-scale(3);
+$small-font-size: modular-scale(-1);
 
 // Line height
 $base-line-height: 1.5;
@@ -18,7 +21,7 @@ $base-z-index: 0;
 // Colors
 $pink: #e6007e;
 $green: #adce6d;
-$dark-gray:  #181716;
+$dark-gray:  #373737;
 $medium-gray: #bfbcb8;
 $light-gray: #e3dfdb;
 
