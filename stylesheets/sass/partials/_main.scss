@@ -1,0 +1,14 @@
+main{
+  @include clearfix;
+  @include outer-container;
+
+  .big-text-index{
+    @include padding(1em);
+    margin-top: modular-scale(1);
+    font-size: $big-font-size;
+    background-color: white;
+  }
+}
+
+
+
