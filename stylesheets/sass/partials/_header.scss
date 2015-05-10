@@ -23,6 +23,8 @@ header.navigation {
   font-family: $heading-font-family;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.07em;
+
 
   .navigation-wrapper {
     @include clearfix;
@@ -32,18 +34,9 @@ header.navigation {
   }
 
   .logo {
-    @include span-columns(4);
-    position: relative;
     img {
-      height: calc(2 * #{$navigation-height});
-      padding: 0.8em 0;
-    }
-    h1{
-      position: absolute;
-      top: 40%;
-      left: 20%;
-      font-size: $big-font-size;
-      color: transparentize(white, 0.2);
+      height: calc(1.2 * #{$navigation-height});
+      padding-top: 0.8em;
     }
   }
 
@@ -125,12 +118,36 @@ header.navigation {
     a {
       color: $navigation-color;
       display: inline-block;
-      font-weight: 400;
+      position: relative;
+      font-weight: 600;
       text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
-        padding-right: 1em;
+        margin-right: 1em;
       }
+
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        transition: width 0s ease, background .5s ease;
+      }
+
+      &:hover:before {
+        width: 100%;
+        background: $navigation-color-hover;
+        transition: width .5s ease;
+      }
+      &:hover:after {
+        width: 100%;
+        background: transparent;
+        transition: all 0s ease;
+      }
+
 
       &:focus,
       &:hover {
@@ -167,6 +184,7 @@ header.navigation {
     > a {
       padding-right: 0.6em;
     }
+
 
     > a:after {
       @include position(absolute, auto -0.4em auto auto);
@@ -247,7 +265,7 @@ header.navigation {
 
         @include media($horizontal-bar-mode) {
           background-color: $navigation-background;
-          padding-left: $navigation-submenu-padding;
+          margin-left: $navigation-submenu-padding;
           text-align: left;
           width: $navigation-submenu-width;
         }
@@ -256,15 +274,50 @@ header.navigation {
   }
 
 //frau
-.woman-wrapper{
+.name-wrapper{
   @include outer-container; 
   $navigation-background: $dark-gray;
-}
-  .woman{
-    @include span-columns(3);
-    @include shift(9);
+  padding: modular-scale(4) 0 modular-scale(6) 0;
+  @include background(url("../images/Frau2.jpg") no-repeat right);
+
+
+  h1{
+    @include span-columns(10);
+    @include shift(1);
+    color: $green;
+    text-align: center;
+    display: inline-block;
+   @include animation( sliding-header 2s cubic-bezier(0.645, 0.045, 0.355, 1.000) both 1s);
   }
+}
 
 }
 
- 
+
+// @-webkit-keyframes sliding-header{
+//   from {transform: translateX(-1000px);}
+// }
+
+@include keyframes(sliding-header){
+  0%{
+    @include transform(scale(.3, .3));
+    opacity: 0;
+  }
+  70%{
+    @include transform(scale(1.05, 1.05));
+    opacity: 1;
+  }
+  80%{
+    @include transform(scale(.95, 0.95));
+    opacity: 1;
+  }
+  100% {
+    @include transform(scale(1, 1));
+    opacity: 1;
+  }
+}
+
+// @keyframes sliding-header{
+//   from {transform: translateX(-1000px);}
+// }
+

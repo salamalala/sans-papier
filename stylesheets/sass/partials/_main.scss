@@ -1,13 +1,87 @@
 main{
   @include clearfix;
-  @include outer-container;
+  @include outer-container; 
+}
 
-  .big-text-index{
-    @include padding(1em);
-    margin-top: modular-scale(1);
-    font-size: $big-font-size;
-    background-color: white;
+.wer{
+  margin-top: -1em; 
+  font-style: italic;
+  font-weight: 400;
+}
+
+.big-text-index{
+  @include padding(golden-ratio(1em,  1));
+  background-color: white;
+  p{
+    margin: 0;
   }
+  &:nth-of-type(n+2){
+    margin-top: modular-scale(2);
+  }
+}
+
+
+
+.beratungsbox{
+  @include span-columns(9); 
+  margin-top: modular-scale(2);
+
+  .map{
+    @include span-columns(4 of 9); 
+    @include background(url("../images/map_bern.jpg"));
+
+  &:nth-of-type(3){
+    margin-top: modular-scale(2);
+
+  }
+  }
+
+  h3{
+    border-bottom: solid $medium-gray 0.15em;
+    padding-bottom: (golden-ratio(0.1em,  1));
+  }
+
+  .beratung{
+    @include span-columns(5 of 9); 
+    background-color: white;
+    @include padding(1em);
+    margin-right: 0;
+    &:nth-of-type(4){
+      margin-top: modular-scale(2);
+    }
+  }
+}
+
+.linksbox{
+  @include span-columns(3); 
+  margin-top: modular-scale(2);
+  a{
+     &:nth-of-type(n+2){
+      margin-top: modular-scale(1);
+    }
+
+    &:hover,
+    &:focus {
+    @include animation(link_hover 1s linear infinite alternate);
+      color: #fff;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+  }
+
+   
+
+   @include keyframes(link_hover){
+    0% {background-color: saturate($action-color, 5%)}
+    50% {background-color: saturate($action-color, 30%)}
+    100% {background-color: saturate($action-color, 5%)}
+   }
+
+
 }
 
 

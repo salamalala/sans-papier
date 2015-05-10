@@ -26,18 +26,19 @@
 
 .footer-2 {
   $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  $footer-background: desaturate(darken($action-color, 20%), 30%);
-  $footer-color: white;
+  $footer-background: $dark-gray;
+  $footer-color: $green;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
+
 
   background: $footer-background;
   padding: $base-spacing;
   width: 100%;
   display: inline-block;
+  margin-top: modular-scale(1);
 
   .footer-logo {
     margin-right: 1em;
@@ -52,6 +53,11 @@
   .footer-logo img {
     height: 1.6em;
   } 
+
+  h3{
+    color: $footer-color;
+    display: inline-block;
+  }
 
   ul {
     line-height: 1.5em;
