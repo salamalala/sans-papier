@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <link rel="stylesheet"  type="text/css" href="stylesheets/normalize.css"   /> 
-  <link rel="stylesheet"  type="text/css" href="stylesheets/main.css"   />
+ <link rel="stylesheet"  type="text/css" href="assets/dist/css/main.min.css"/>
   <script src="//use.typekit.net/diy3rqx.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
 </head>
@@ -17,7 +16,12 @@
 
       <div class="navigation-wrapper">
         <a href="#" class="logo">
-          <img src="images/logo.svg" alt="Logo Sans Papier Beratungsstelle">
+
+          <img src="assets/dist/images/logo.svg" 
+
+           
+
+              alt="Logo Sans Papier Beratungsstelle">
         </a>
 
 
@@ -25,7 +29,7 @@
 
         <nav role="navigation">
           <ul id="js-navigation-menu" class="navigation-menu show">
-            <li class="nav-link"><a href="#">Beratung</a></li>
+            <li class="nav-link"><a href="beratung.html">Beratung</a></li>
             <li class="nav-link"><a href="#">Unterstützung</a></li>
             <li class="nav-link"><a href="#">Über uns</a></li>
             <li class="nav-link more"><a href="#">Aktivitäten</a>
@@ -50,28 +54,30 @@
 
     <main>
 
-      <div class="wer big-text-index">
+      <div class="big-text-box box wer">
         <p class="big-paragraph quote">
-          Wir beraten und informieren <span class="highlighted">MigrantInnen</span>, die in der Schweiz leben, <span class="highlighted">ohne </span>eine <span class="highlighted">Aufenthaltsbewilligung </span>zu besitzen. Zudem leisten wir Sensibilisierungs- und Informationsarbeit in der Region Bern.
+          Wir <a class="highlighted" href="#">beraten und informieren MigrantInnen</a>, die in der Schweiz leben, ohne eine Aufenthaltsbewilligung zu besitzen. Zudem leisten wir <a class="highlighted" href="#">Sensibilisierungs- und Informationsarbeit </a>in der Region Bern.
         </p>
       </div>
 
-      <div class="big-text-index">
-        <h2>Neuigkeiten</h2>
+      <div class="big-text-box box">
+        <h5>Fundraising</h5>
+        <h2>Solilauf 2015 - jetzt anmelden</h2>
+        <h4 class="italic">12.05.2014 | Karin Jenni</h4>
         <p class="big-paragraph">
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae voluptates nulla possimus dicta dolorum ex autem ducimus, vero impedit veritatis libero dolorem nemo quis perspiciatis omnis nesciunt eligendi adipisci culpa.
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae voluptates nulla possimus dicta dolorum ex autem ducimus, vero impedit veritatis libero dolorem nemo quis perspiciatis omnis nesciunt eligendi adipisci culpa...
        </p>
+      <a class="minorlink" href="#">Weiterlesen</a>
      </div>
 
 
      <div class="beratungsbox">
 
 
-      <div class="map">
-        Map Bern
+      <div class="map" id="map-canvas">
       </div> 
 
-      <div class="beratung">
+      <div class="beratung box">
         <h3>Beratungszeiten Bern:</h3>
         <p>
           Freitag 15.00-19.00 Uhr (ohne Voranmeldung)
@@ -86,13 +92,12 @@
           Freitag 15.00-19.00 Uhr (ohne Voranmeldung)
         </p>
       </div>
-      
 
-      <div class="map">
-        Map Bern
+
+      <div class="map" id="map-canvas">
       </div>  
 
-      <div class="beratung">     
+      <div class="beratung box">     
         <h3>Beratungszeiten Biel:</h3>
         <p>
          Mittwoch Nachmittag 14 bis 17 Uhr
@@ -113,15 +118,15 @@
 
    <div class="linksbox">
 
-     <a href="#">Mitglied werden</a>
+     <a class="mainlink" href="#"><p>Mitglied werden</p></a>
 
-     <a href="#">Spenden</a>
+     <a class="mainlink" href="#"><p>Spenden</p></a>
 
-     <a href="#">Newsletter</a>
+     <a class="mainlink" href="#"><p>Newsletter</p></a>
 
-     <a href="#">Bulletin</a>
+     <a class="mainlink" href="#"><p>Bulletin</p></a>
 
-     <a href="#">Facebook</a>
+     <a class="mainlink" href="#"><p>Facebook</p></a>
 
 
    </div>
@@ -137,9 +142,9 @@
 
  <footer class="footer-2" role="contentinfo">
   <div class="footer-logo">
-    <img src="images/logo.svg" alt="Logo Sans Papier Beratungsstelle">
+    <img src="assets/dist/images/logo.svg" alt="Logo Sans Papier Beratungsstelle">
   </div>
-  <h3>Verein Berner Beratungsstelle für Sans-Papiers | Eigerplatz 5 | 3007 Bern</h3>
+  <h4>Verein Berner Beratungsstelle für Sans-Papiers | Eigerplatz 5 | 3007 Bern</h4>
 
   <div class="footer-secondary-links">
 
@@ -158,6 +163,7 @@
 
 </div>
 
+<script  type="text/javascript" src="assets/dist/js/main.min.js"></script>
 
 
 </body>
