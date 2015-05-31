@@ -6,7 +6,8 @@ body{
 .box{
   padding: $big-golden-ratio;
   background-color: white;
-  position: relative;
+  display: flex;
+  flex-direction: column;
   p:last-child{
     margin: 0;
   }
@@ -20,7 +21,7 @@ body{
   color: $medium-gray;
   border-radius: $base-border-radius;
   border: $medium-gray 3px solid;
-  margin-top: 20px;
+  position: relative;
   cursor: pointer;
   font-family: $heading-font-family;
   padding: $small-golden-ratio;
@@ -36,9 +37,8 @@ body{
   letter-spacing: 0.08em;
   background-color: none;
   transition: 0.4s ease-out;
-  position: absolute;
-  right: $big-golden-ratio;
-  bottom: $big-golden-ratio;
+  align-self: flex-end;
+  margin-top: $small-golden-ratio;
   &:before{
     content: '➞';
     position: absolute;
@@ -49,7 +49,7 @@ body{
     top: 25%;
   }
     &:hover:before{
-      left: 85%;
+      left: 89%;
       opacity: 1;
 
     
